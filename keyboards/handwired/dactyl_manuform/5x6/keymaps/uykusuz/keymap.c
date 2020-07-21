@@ -62,10 +62,10 @@
 #define KEYMAP_LAYER_1_LEFT_ROW_6_RIGHT _______,_______
 #define KEYMAP_LAYER_1_LEFT_ROW_7_RIGHT _______,_______
 
-#define KEYMAP_LAYER_1_RIGHT_ROW_0_LEFT  _______, _______,_______,_______,_______,_______
+#define KEYMAP_LAYER_1_RIGHT_ROW_0_LEFT _______, _______,_______,_______,_______,_______
 #define KEYMAP_LAYER_1_RIGHT_ROW_1_LEFT _______ , _______  , IDE_DEBUG , IDE_RUN , IDE_BUILD , _______
-#define KEYMAP_LAYER_1_RIGHT_ROW_2_LEFT IDE_BRKPT , IDE_RESUME , IDE_STEPOUT, IDE_STEPINTO , IDE_STEPOVER,  _______
-#define KEYMAP_LAYER_1_RIGHT_ROW_3_LEFT  _______, _______, IDE_SELECTFILE , IDE_GOTOTEST , IDE_GOTOIMPL ,_______
+#define KEYMAP_LAYER_1_RIGHT_ROW_2_LEFT _______ , IDE_RESUME , IDE_STEPOUT, IDE_STEPINTO , IDE_STEPOVER, IDE_BRKPT
+#define KEYMAP_LAYER_1_RIGHT_ROW_3_LEFT _______, _______, IDE_SELECTFILE , IDE_GOTOTEST , IDE_GOTOIMPL ,_______
 #define KEYMAP_LAYER_1_RIGHT_ROW_4_LEFT                      _______,_______
 #define KEYMAP_LAYER_1_RIGHT_ROW_5_LEFT                                  _______,_______
 #define KEYMAP_LAYER_1_RIGHT_ROW_6_LEFT                                  _______,_______
