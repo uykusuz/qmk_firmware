@@ -55,8 +55,8 @@
 
 #define KEYMAP_LAYER_1_LEFT_ROW_0_RIGHT _______ , _______ , _______ , _______ , _______ , _______
 #define KEYMAP_LAYER_1_LEFT_ROW_1_RIGHT _______ , _______ , _______ , _______ , _______ , _______
-#define KEYMAP_LAYER_1_LEFT_ROW_2_RIGHT _______ , _______ , _______ , _______ , _______ , _______
-#define KEYMAP_LAYER_1_LEFT_ROW_3_RIGHT _______ , _______ , _______ , _______ , _______ , _______
+#define KEYMAP_LAYER_1_LEFT_ROW_2_RIGHT KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R , _______ , _______
+#define KEYMAP_LAYER_1_LEFT_ROW_3_RIGHT _______ , KC_WH_D , KC_WH_U , _______ , _______ , _______
 #define KEYMAP_LAYER_1_LEFT_ROW_4_RIGHT                      _______,_______
 #define KEYMAP_LAYER_1_LEFT_ROW_5_RIGHT _______,_______
 #define KEYMAP_LAYER_1_LEFT_ROW_6_RIGHT _______,_______
