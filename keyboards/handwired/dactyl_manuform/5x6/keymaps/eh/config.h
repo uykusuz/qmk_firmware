@@ -1,6 +1,5 @@
 /*
-Copyright 2019 @foostan
-Copyright 2020 Drashna Jaelre <@drashna>
+Copyright 2012 Jun Wako <wakojun@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -16,26 +15,23 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+
 #pragma once
 
-/* Select hand configuration */
+
+#define USE_SERIAL
 
 //#define MASTER_LEFT
-//#define MASTER_RIGHT
+// #define MASTER_RIGHT
 #define EE_HANDS
+// Rows are doubled-up
 
-#ifdef RGBLIGHT_ENABLE
-#    undef RGBLED_NUM
-#    define RGBLIGHT_ANIMATIONS
-#    define RGBLED_NUM 54
-#    undef RGBLED_SPLIT
-#    define RGBLED_SPLIT \
-        { 27, 27 }
-#    define RGBLIGHT_LIMIT_VAL 120
-#    define RGBLIGHT_HUE_STEP  10
-#    define RGBLIGHT_SAT_STEP  17
-#    define RGBLIGHT_VAL_STEP  17
-#    define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_SWIRL
-#endif
+// Underglow
+#define RGB_DI_PIN D3
+#define RGBLED_NUM 18    // Number of LEDs
+#define RGBLED_SPLIT { 9, 9 }
+#define RGBLIGHT_SLEEP
+#define RGBLIGHT_LIMIT_VAL 150
+#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_MOOD
 
-#define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
