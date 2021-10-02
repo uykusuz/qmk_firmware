@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  KC_Q,  KC_W,   KC_E,   KC_R,   KC_T,           KC_Y,   KC_U,   KC_I,    KC_O,   KC_P,    KC_BSPC,   \
     KC_TAB,  KC_A,  KC_S,   KC_D,   KC_F,   KC_G,           KC_H,   KC_J,   KC_K,    KC_L,   KC_SCLN, KC_QUOT,   \
     KC_LSFT, KC_Z,  KC_X,   KC_C,   KC_V,   KC_B,           KC_N,   KC_M,   KC_COMM, KC_DOT, KC_SLSH, KC_BSLASH, \
-                    KC_GRV, KC_MEH,                                         KC_LBRC, KC_RBRC,                    \
+                    KC_GRV, KC_HYPR,                                        KC_LBRC, KC_RBRC,                    \
                                     KC_LCTL, _______,       _______, KC_RALT,                                    \
                                     KC_DEL,  RAISE,         LOWER,  KC_PGUP,                                     \
                                     KC_LGUI, KC_SPC,        KC_ENT, KC_PGDN                                      \
@@ -75,3 +75,44 @@ void persistent_default_layer_set(uint16_t default_layer) {
   eeconfig_update_default_layer(default_layer);
   default_layer_set(default_layer);
 }
+
+// Rotary encoder related code
+#ifdef ENCODER_ENABLE
+bool encoder_update_user(uint8_t index, bool clockwise) {
+  if (index == 1) { // Encoder on master side
+    if(IS_LAYER_ON(_RAISE)) { // on Raise layer
+      // Cursor control
+      if (clockwise) {
+          tap_code(KC_MNXT);
+      } else {
+          tap_code(KC_MPRV);
+      }
+    }
+    else {
+      if (clockwise) {
+          tap_code(KC_VOLU);
+      } else {
+          tap_code(KC_VOLD);
+      }
+    }
+  }
+  else if (index == 0) { // Encoder on slave side
+    if(IS_LAYER_ON(_LOWER)) { // on Lower layer
+      //
+      if (clockwise) {
+          tap_code(KC_RIGHT);
+      } else {
+          tap_code(KC_LEFT);
+      }
+    }
+    else {
+      if (clockwise) {
+          tap_code(KC_DOWN);
+      } else {
+          tap_code(KC_UP);
+      }
+    }
+  }
+    return true;
+}
+#endif

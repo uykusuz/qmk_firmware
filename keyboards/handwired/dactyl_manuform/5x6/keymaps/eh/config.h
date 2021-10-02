@@ -22,12 +22,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL
 
 //#define MASTER_LEFT
-// #define MASTER_RIGHT
-#define EE_HANDS
+#define MASTER_RIGHT
+//#define EE_HANDS
 // Rows are doubled-up
 
+/* Encoder support */
+#define ENCODERS_PAD_A { F5 }
+#define ENCODERS_PAD_B { F4 }
+#define ENCODERS_PAD_A_RIGHT { F4 }
+#define ENCODERS_PAD_B_RIGHT { F5 }
+#define ENCODER_RESOLUTION 2
+#define ENCODER_DIRECTION_FLIP
+
 // Underglow
-#define RGB_DI_PIN D3
+#define RGB_DI_PIN D1
 #define RGBLED_NUM 18    // Number of LEDs
 #define RGBLED_SPLIT { 9, 9 }
 #define RGBLIGHT_SLEEP
