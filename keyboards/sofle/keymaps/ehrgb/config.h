@@ -5,7 +5,7 @@
 
 /* Select hand configuration */
 
-//define MASTER_LEFT
+//#define MASTER_LEFT
 //#define MASTER_RIGHT
 #define EE_HANDS
 //#define USE_SERIAL_PD2
@@ -17,7 +17,6 @@
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
 
-//#define VIA_EEPROM_LAYOUT_OPTIONS_SIZE 4
 #ifdef RGBLIGHT_ENABLE
 #define RGBLIGHT_SPLIT
 #define RGBLED_NUM 72  // Number of LEDs
